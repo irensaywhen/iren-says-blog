@@ -2,3 +2,24 @@ exclude:
   - package.json
   - node_modules
   - gulpfile.js
+
+collections:
+  category:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "category"
+    values:
+      layout: "category"
+  - scope:
+      path: ""
+      type: "posts"
+    values: 
+      layout: "post"
+      permalink: "/:slugified_categories/:title"
+  - scope: 
+      path: ""
+    values:
+      layout: "default"
