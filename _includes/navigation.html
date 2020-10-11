@@ -1,21 +1,2 @@
-<nav>
-    <ul>
-        {% for category in site.category %}
-            <li>
-                <h3>
-                    <a
-                        href="{{ category.url }}" {% if page.url == category.url %} class="active"
-                        {% endif %}>{{ category.name }}</a>
-                </h3>
-
-            </li>
-        {% endfor %}
-    </ul>
-    {% for item in site.data.navigation %}
-        <a
-            href="{{ item.link }}" {% if page.url == item.link %} class="active"
-            {% endif %}>
-            {{ item.name }}
-        </a>
-    {% endfor %}
-</nav>
+{% include sections_navigation.html %}
+{% include categories_navigation.html %}

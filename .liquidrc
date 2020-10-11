@@ -20,7 +20,7 @@
     "correct": true,
     "force_attribute": true,
     "braces": false,
-    "preserve": 2,
+    "preserve": 1,
     "unformatted": false
   },
   "js": {

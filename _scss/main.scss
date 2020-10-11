@@ -1,9 +1,6 @@
+@import "variables";
+@import "theme";
+@import "navigation";
+
+// Bootstrap
 @import "../bootstrap/scss/bootstrap";
-
-body {
-  background: orange;
-}
-
-.active {
-    color: white;
-}

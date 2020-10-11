@@ -1,0 +1,14 @@
+<nav>
+    <ul
+        class="list-unstyled d-flex justify-content-between px-3 py-2 border-bottom">
+        {% for category in site.category %}
+            <li>
+
+                <a
+                    href="{{ category.url }}" {% if page.url == category.url %} class="active"
+                    {% endif %}>{{ category.name }}</a>
+
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

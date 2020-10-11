@@ -1,0 +1,32 @@
+<nav
+    class="d-flex flex-column align-items-center position-relative border-bottom py-2">
+    <!--Site sections start-->
+    <ul
+        class="pl-0 list-unstyled sections position-absolute">
+        {% for item in site.data.navigation %}
+            <li
+                class="px-3">
+                <a
+                    href="{{ item.link }}" {% if page.url == item.link %} class="active"
+                    {% endif %}>
+                    {{ item.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <!--Site sections end-->
+        
+        <!--Site logo-->
+    <h1 class="mb-0 title">
+        <a
+            class="d-flex"
+            href="/">
+            <img
+                src="{{ site.url }}/assets/img/lips.svg"
+                class="logo"
+                alt="Blog logo">
+            <span>IrenSays</span>
+
+        </a>
+    </h1>
+</nav>
