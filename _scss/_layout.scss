@@ -1,6 +1,9 @@
 .logo {
-  max-width: $logo-max-width;
   width: $logo-max-width;
+
+  @include screen-sm {
+    width: $logo-sm-max-width;
+  }
 }
 
 .sections {

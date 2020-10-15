@@ -1,3 +1,28 @@
 .font-bio-rhyme {
   font-family: $font-family-serif;
 }
+
+//Media Query Mixins
+@mixin screen-sm {
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media screen and (min-width: map-get($grid-breakpoints, xl)) {
+    @content;
+  }
+}
