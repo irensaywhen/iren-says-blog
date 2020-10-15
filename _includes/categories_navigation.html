@@ -7,7 +7,8 @@
                 <a
                     href="{{ category.url }}"
                     class="btn btn-small btn-light font-bio-rhyme font-weight-bolder"
-                    {% if page.url == category.url %} class="active"
+                    {% if page.url == category.url %}
+                    class="btn btn-small btn-light font-bio-rhyme font-weight-bolder active"
                     {% endif %}>{{ category.name }}
                 </a>
 
