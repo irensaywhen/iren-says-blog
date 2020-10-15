@@ -1,6 +1,8 @@
-@import "variables";
-@import "theme";
-@import "navigation";
+@import 'variables';
+@import 'theme';
 
 // Bootstrap
-@import "../bootstrap/scss/bootstrap";
+@import '../bootstrap/scss/bootstrap';
+
+// Other styles
+@import 'navigation';

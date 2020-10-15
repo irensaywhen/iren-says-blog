@@ -1,3 +1,21 @@
 $primary: #2b2b2b;
-$white: #f7f7f7;
-$red:#ff3530;
+$secondary: #ff3530;
+$light: #f7f7f7;
+
+// Theme border radiuses
+$border-radius: none;
+$border-radius-lg: none;
+$border-radius-sm: none;
+
+// Theme body colors
+$body-bg: $light;
+$body-color: $primary;
+
+// Disable link hover decoration
+$link-hover-decoration: none;
+
+// Typography
+$font-family-serif: 'BioRhyme', serif;
+$font-family-base: 'Inter', sans-serif;
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 700;

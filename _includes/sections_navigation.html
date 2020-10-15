@@ -7,16 +7,17 @@
             <li
                 class="px-3">
                 <a
-                    href="{{ item.link }}" {% if page.url == item.link %} class="active"
-                    {% endif %}>
+                    href= { class="active"
+                    {
+                    ="{{ item.link }}" {% if page.url == item.link %} {% endif %}>
                     {{ item.name }}
                 </a>
             </li>
         {% endfor %}
     </ul>
     <!--Site sections end-->
-        
-        <!--Site logo-->
+            
+            <!--Site logo-->
     <h1 class="mb-0 title">
         <a
             class="d-flex"
@@ -24,7 +25,8 @@
             <img
                 src="{{ site.url }}/assets/img/lips.svg"
                 class="logo"
-                alt="Blog logo">
+                alt="Blog logo"
+                >
             <span>IrenSays</span>
 
         </a>

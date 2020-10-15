@@ -1,11 +1,12 @@
 ---
-title:  Post about freelance
+title: Post about freelance
 slug: post-about-freelance
-permalink: "/:slugified_categories/:title"
+permalink: '/:slugified_categories/:title'
 
-categories: 
-  - Frontend Freelance
+categories:
+  - freelance
 ---
+
 A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.
 

@@ -9,17 +9,18 @@ collections:
 
 defaults:
   - scope:
-      path: ""
-      type: "category"
+      path: ''
+      type: 'category'
     values:
-      layout: "category"
+      layout: 'category'
   - scope:
-      path: ""
-      type: "posts"
-    values: 
-      layout: "post"
-      permalink: "/:slugified_categories/:title"
-  - scope: 
-      path: ""
+      path: ''
+      type: 'posts'
     values:
-      layout: "default"
+      layout: 'post'
+      permalink: '/:slugified_categories/:title'
+      excerpt_separator: <!--more-->
+  - scope:
+      path: ''
+    values:
+      layout: 'default'
