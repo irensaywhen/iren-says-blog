@@ -1,12 +1,13 @@
-.logo {
-  width: $logo-max-width;
+.logo-link {
+  display: inline-block;
+  min-height: $logo-height;
+  background: $light;
 
-  @include screen-sm {
-    width: $logo-sm-max-width;
+  .logo {
+    width: $logo-max-width;
+
+    @include screen-sm {
+      width: $logo-sm-max-width;
+    }
   }
-}
-
-.sections {
-  top: 0;
-  right: 0;
 }

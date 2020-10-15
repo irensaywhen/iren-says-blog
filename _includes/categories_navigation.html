@@ -1,18 +1,6 @@
 <nav class="d-none d-sm-block">
     <ul
         class="list-unstyled d-flex justify-content-center px-3 py-2 bg-primary">
-        {% for category in site.category %}
-            <li class="category">
-
-                <a
-                    href="{{ category.url }}"
-                    class="btn btn-small btn-light font-bio-rhyme font-weight-bolder"
-                    {% if page.url == category.url %}
-                    class="btn btn-small btn-light font-bio-rhyme font-weight-bolder active"
-                    {% endif %}>{{ category.name }}
-                </a>
-
-            </li>
-        {% endfor %}
+        {%- include categories_items.html -%}
     </ul>
 </nav>

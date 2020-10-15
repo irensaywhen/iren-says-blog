@@ -30,10 +30,10 @@ title: Home
                 Read more
             </a>
             <ul
-                class="list-unstyled d-flex pt-3">
+                class="list-unstyled d-flex flex-wrap pt-3">
                 {%- for category in site.category -%}
                     {%- if latest_post.categories contains category.tag  -%}
-                        <li class="category">
+                        <li class="category pt-1">
                             <a
                                 href="{{ category.url }}" class="btn btn-primary btn-small font-bio-rhyme">{{ category.name }}
                             </a>

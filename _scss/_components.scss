@@ -7,8 +7,87 @@
     margin-right: 0;
   }
 
-  .btn-small {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+  @include screen-sm {
+    .btn-small {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
   }
+}
+
+// Menu button styles
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: map-get($spacers, 3);
+  top: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.menu-btn .btn-line {
+  width: 28px;
+  height: 2px;
+  margin: 0 0 5px 0;
+  background: $primary;
+  transition: all 0.5s ease-out;
+}
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/*---Menu overlay---*/
+
+.menu {
+  @include ease-out;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  background: $primary;
+  transform: translate(-100%, 0);
+
+  .logo-link {
+    padding: map-get($spacers, 2);
+  }
+
+  .category {
+    padding: 0 map-get($spacers, 1) map-get($spacers, 2);
+  }
+
+  .sections {
+    background: $light;
+    width: 100%;
+    margin: 0;
+
+    .category {
+      padding: 0 map-get($spacers, 2) 0 0;
+    }
+  }
+
+  &.show {
+    transform: translate(0, 0);
+  }
+}
+
+//Delay each nav item slide by 0.1s
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}
+
+// Sections in menu
+.sections {
+  top: 0;
+  right: 0;
 }
