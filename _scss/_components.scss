@@ -1,0 +1,9 @@
+.category {
+  display: inline-block;
+  margin-right: map-get($spacers, 1);
+  text-transform: lowercase;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}

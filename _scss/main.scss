@@ -1,8 +1,13 @@
 @import 'variables';
-@import 'theme';
 
 // Bootstrap
 @import '../bootstrap/scss/bootstrap';
 
 // Other styles
+@import 'mixins';
+@import 'theme';
+@import 'components';
+@import 'layout';
+// Need to put navigation into layout or somewhere else
 @import 'navigation';
+@import 'pages';

@@ -1,11 +1,13 @@
 <nav>
     <ul
-        class="list-unstyled d-flex justify-content-between px-3 py-2 border-bottom">
+        class="list-unstyled d-flex justify-content-center px-3 py-2 bg-primary">
         {% for category in site.category %}
-            <li>
+            <li class="category">
 
                 <a
-                    href="{{ category.url }}" {% if page.url == category.url %} class="active"
+                    href="{{ category.url }}"
+                    class="btn btn-small btn-light font-bio-rhyme font-weight-bolder"
+                    {% if page.url == category.url %} class="active"
                     {% endif %}>{{ category.name }}
                 </a>
 

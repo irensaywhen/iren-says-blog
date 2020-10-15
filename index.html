@@ -33,9 +33,9 @@ title: Home
                 class="list-unstyled d-flex pt-3">
                 {%- for category in site.category -%}
                     {%- if latest_post.categories contains category.tag  -%}
-                        <li class="border">
+                        <li class="category">
                             <a
-                                href="{{ category.url }}" class="d-inline-block w-100 h-100 btn btn-primary btn-small text-lowercase">{{ category.name }}
+                                href="{{ category.url }}" class="btn btn-primary btn-small font-bio-rhyme">{{ category.name }}
                             </a>
                         </li>
                     {%- endif -%}

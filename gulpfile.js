@@ -16,7 +16,7 @@ function styles() {
       })
     )
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./assets/css/'))
+    .pipe(gulp.dest('./_site/assets/css/'))
     .pipe(browserSync.stream());
 }
 
@@ -41,7 +41,7 @@ function watch() {
   gulp.watch('_scss/**/*.scss', styles);
   gulp.watch('./_site/*.html').on('change', reload);
   gulp.watch('./_site/**/*.md').on('change', reload);
-  gulp.watch('./assets/css/**/*.css').on('change', browserSync.stream);
+  //gulp.watch('./assets/css/**/*.css').on('change', browserSync.stream);
 }
 
 exports.develop = gulp.series(styles, serve, watch);
