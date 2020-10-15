@@ -1,6 +1,9 @@
 ---
 title: javascript title
-
+slug: post-about-javascript
+permalink: '/:slugified_categories/:title'
+thumbnail: '/assets/img/IMG_20170708_210957.jpg'
+thumbnail_alt: 'Baikal photo 2'
 categories:
   - web development
   - javascript
@@ -8,7 +11,6 @@ categories:
 
 A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.
-
 In some countries, bananas used for cooking may be called "plantains",
 distinguishing them from dessert bananas. The fruit is variable in size, color,
 and firmness, but is usually elongated and curved, with soft flesh rich in
