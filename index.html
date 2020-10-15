@@ -2,56 +2,55 @@
 title: Home
 ---
 <main
-    class="container">
+    class="container-md">
     <!--The latest article section-->
     <section
-        class="row">
+        class="row no-gutters">
         {%- include latest_post.html -%}
     </section>
     <!--Other articles section start-->
     <section
-        class="row">
+        class="row mt-4">
         {%- for post in site.posts -%}
             <!--Skip the latest post-->
             {%- if forloop.first == true -%}
                 {%- continue -%}
             {%- endif -%}
             <div
-                class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                <div class="card">
-                <a
-                    href="{{ post.url }}">
-                    <img
-                        class="card-img-top"
-                        src="{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}">
-                </a>
+                class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-3">
                 <div
-                    class="card-body clamp-excerpt">
-                    <h3
-                        class="card-title">{{ post.title }}</h3>
+                    class="card h-100">
+                    <a
+                        href="{{ post.url }}">
+                        <img
+                            class="card-img-top"
+                            src="{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}">
+                    </a>
+                    <div
+                        class="card-body pb-0 clamp-excerpt">
+                        <h3
+                            class="card-title">{{ post.title }}</h3>
                         {{ post.excerpt }}
-                        
-                    <!--<p
-                        class="card-text">{{ post.excerpt }}</p>-->
-
+                    </div>
+                    <div
+                        class="card-footer border-0 bg-white pt-0">
                         <ul
-                        class="list-unstyled d-flex flex-wrap pt-3">
-                        {%- for category in site.category -%}
-                            {%- if latest_post.categories contains category.tag  -%}
-                                <li
-                                    class="category pt-1">
-                                    <a
-                                        href="{{ category.url }}" class="btn btn-primary btn-small font-bio-rhyme">{{ category.name }}
-                                    </a>
-                                </li>
-                            {%- endif -%}
-                        {%- endfor -%}
-                    </ul>
+                            class="list-unstyled d-flex flex-wrap pt-2">
+                            {%- for category in site.category -%}
+                                {%- if latest_post.categories contains category.tag  -%}
+                                    <li
+                                        class="category pt-1">
+                                        <a
+                                            href="{{ category.url }}" class="btn btn-primary btn-small font-bio-rhyme">{{ category.name }}
+                                        </a>
+                                    </li>
+                                {%- endif -%}
+                            {%- endfor -%}
+                        </ul>
+                    </div>
                 </div>
-            </div>
             </div>
         {%- endfor -%}
     </section>
     <!--Other articles section end-->
 </main>
-
