@@ -40,6 +40,7 @@ function reload() {
 function watch() {
   gulp.watch('_scss/**/*.scss', styles);
   gulp.watch('./_site/*.html').on('change', reload);
+  gulp.watch('./_site/**/*.js').on('change', reload);
   gulp.watch('./_site/**/*.md').on('change', reload);
   //gulp.watch('./assets/css/**/*.css').on('change', browserSync.stream);
 }
