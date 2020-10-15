@@ -1,13 +1,15 @@
 <nav
-    class="position-relative py-2 text-center">
+    class="position-relative py-3 text-left text-sm-center pl-3 pl-sm-0">
     <!--Site sections start-->
     <ul
-        class="pl-0 list-unstyled sections position-absolute">
+        class="pl-0 list-unstyled sections position-absolute text-left d-flex flex-column justify-content-around py-1 h-100 mb-0 mr-0">
         {% for item in site.data.navigation %}
             <li
-                class="px-3">
+                class="category mr-0">
                 <a
-                    href="{{ item.link }}" {% if page.url == item.link %} class="active"
+                    href="{{ item.link }}"
+                    class="btn btn-primary btn-small w-100 font-bio-rhyme"
+                    {% if page.url == item.link %} class="active"
                     {% endif %}>
                     {{ item.name }}
                 </a>
