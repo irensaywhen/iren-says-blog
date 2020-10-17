@@ -2,7 +2,7 @@
     <li
         class="category mr-0">
         <a
-            href="{{ item.link }}" class="btn btn-primary btn-small w-100 font-bio-rhyme"
+            href="{{ site.baseurl | append: item.link }}" class="btn btn-primary btn-small w-100 font-bio-rhyme"
             {% if page.url == item.link %} class="btn btn-light btn-small w-100 font-bio-rhyme active"
             {% endif %}>
             {{ item.name }}
