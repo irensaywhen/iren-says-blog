@@ -1,11 +1,13 @@
 {% for item in site.data.navigation %}
     <li
         class="category mr-0">
+
+        {%- capture item_relative_url -%}
+            {{item.link | relative_url}}
+        {%- endcapture -%}
+        {{item_relative_url}}
         <a
-            href="{{ site.baseurl | append: item.link }}" class="btn btn-primary btn-small w-100 font-bio-rhyme"
-            {% if page.url == item.link %} class="btn btn-light btn-small w-100 font-bio-rhyme active"
-            {% endif %}>
-            {{ site.baseurl | append: item.link }}
+            href="{{ item_relative_url }}" class="btn btn-primary btn-small w-100 font-bio-rhyme {% if page.url == item.link | relative_url %} active {% endif %}">
             {{ item.name }}
         </a>
     </li>
