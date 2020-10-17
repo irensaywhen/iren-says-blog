@@ -7,6 +7,9 @@ collections:
   category:
     output: true
 
+github:
+  baseurl: '/iren-says-blog/'
+
 defaults:
   - scope:
       path: ''
