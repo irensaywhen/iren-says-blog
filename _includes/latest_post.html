@@ -3,7 +3,7 @@
     {%- assign latest_post = site.posts | first -%}
     <!--Post thumbnail-->
     <img
-    src="{{ latest_post.thumbnail | relative_url }}" alt="{{ latest_post.thumbnail_alt }}" class="w-100 mw-100">
+        src="{{ latest_post.thumbnail | relative_url }}" alt="{{ latest_post.thumbnail_alt }}" class="w-100 mw-100">
     <div
         class="px-3">
         <!--Post title-->
@@ -23,15 +23,17 @@
         </a>
         <ul
             class="list-unstyled d-flex flex-wrap pt-3">
-            {%- for category in site.category -%}
-                {%- if latest_post.categories contains category.tag  -%}
-                    <li
-                        class="category pt-1">
-                        <a
-                            href="{{ category.url | relative_url }}" class="btn btn-primary btn-small font-bio-rhyme">{{ category.name }}
-                        </a>
-                    </li>
-                {%- endif -%}
+
+            {%- for tag in latest_post.tags -%}
+                {%- capture tag_url -%}
+                    {{ tag | slugify |  prepend: site.data.archives.tag | relative_url }}
+                {%- endcapture -%}
+                <li
+                    class="category pt-1">
+                    <a
+                        href="{{ tag_url | relative_url }}" class="btn btn-primary btn-small font-bio-rhyme">{{ tag }}
+                    </a>
+                </li>
             {%- endfor -%}
         </ul>
     </div>

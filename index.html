@@ -2,16 +2,6 @@
 title: Home
 ---
 
-{%- for category in site.categories -%}
-{%- capture category_url -%} {{ category | first | slugify |  prepend: site.data.archives.category | relative_url }} {%- endcapture -%}
-    <li class="category">
-        {{category_url}}
-    </li>
-{%- endfor -%}
-
-{%- for category in site.categories -%}
-{{category | first}}
-{%- endfor -%}
 <main
     class="container-md">
     <!--The latest article section-->

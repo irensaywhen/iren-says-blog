@@ -34,7 +34,7 @@ plugins:
   - jekyll-archives
 
 jekyll-archives:
-  enabled: 'all'
+  enabled: ['categories', 'tags']
   layout: archive
   permalinks:
     year: '/archives/year/:year/'

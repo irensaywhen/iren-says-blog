@@ -7,6 +7,8 @@ thumbnail_alt: 'Baikal photo 2'
 categories:
   - web development
   - javascript
+tags:
+  - javascript
 ---
 
 A banana is an edible fruit – botanically a berry – produced by several kinds
