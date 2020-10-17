@@ -3,10 +3,10 @@
     <div
         class="card h-100">
         <a
-            href="{{ post.url }}">
+            href="{{ post.url | relative_url }}">
             <img
                 class="card-img-top"
-                src="{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}">
+                src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
         </a>
         <div
             class="card-body pb-0 clamp-excerpt">
@@ -23,7 +23,7 @@
                         <li
                             class="category pt-1">
                             <a
-                                href="{{ category.url }}" class="btn btn-primary btn-small font-bio-rhyme">{{ category.name }}
+                                href="{{ category.url | relative_url }}" class="btn btn-primary btn-small font-bio-rhyme">{{ category.name }}
                             </a>
                         </li>
                     {%- endif -%}
