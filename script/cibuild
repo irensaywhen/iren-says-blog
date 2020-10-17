@@ -18,6 +18,7 @@ git clone https://${GH_TOKEN}@github.com/irensaywhen/iren-says-blog.git --branch
 
 # build with Jekyll into "_site"
 JEKYLL_ENV=production bundle exec jekyll build --baseurl /iren-says-blog
+bundle exec htmlproofer ./_site --disable-external
 
 # push
 cd _site
