@@ -1,6 +1,20 @@
 ---
 layout: default
 ---
-<h1>This is the archive page!</h1>
-<h2>{{page.type}}</h2>
-<p>{{site.data.archives.category}}</p>
+
+<main
+    class="container-md">
+    <h1
+        class="text-center h3 pt-3 pb-2">
+        <span
+            class="small">{{page.type | capitalize }}
+            :</span>
+        {{ page.title | capitalize }}</h1>
+
+    <section
+        class="row mt-4">
+        {%- for post in page.posts -%}
+            {%- include post.html -%}
+        {%- endfor -%}
+    </section>
+</main>
