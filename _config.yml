@@ -29,3 +29,16 @@ defaults:
       path: ''
     values:
       layout: 'default'
+
+plugins:
+  - jekyll-archives
+
+jekyll-archives:
+  enabled: 'all'
+  layout: archive
+  permalinks:
+    year: '/archives/year/:year/'
+    month: '/archives/month/:year-:month/'
+    day: '/archives/day/:year-:month-:day/'
+    tag: '/archives/tag/:name/'
+    category: '/archives/category/:name/'
