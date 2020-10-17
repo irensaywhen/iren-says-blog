@@ -10,6 +10,8 @@ collections:
 github:
   baseurl: '/iren-says-blog/'
 
+baseurl: '/'
+
 defaults:
   - scope:
       path: ''

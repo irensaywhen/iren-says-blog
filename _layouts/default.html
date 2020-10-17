@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
+    <link rel="stylesheet" href={{"/assets/css/main.css" | relative_url }} />
     <!--Heading fonts-->
     <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&display=swap" rel="stylesheet">
     <!--Base fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!--Clamp.js - crossbrowser text clapming-->
-    <script src="{{ site.baseurl }}/assets/js/clamp.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/main.js" defer></script>
+    <script src="{{ '/assets/js/clamp.min.js' | relative_url }}" defer ></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
   </head>
   <body>
     {% include navigation.html %} 
