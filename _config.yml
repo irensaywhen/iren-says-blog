@@ -3,10 +3,6 @@ exclude:
   - node_modules
   - gulpfile.js
 
-collections:
-  category:
-    output: true
-
 github:
   baseurl: '/iren-says-blog/'
 
