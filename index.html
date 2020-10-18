@@ -2,6 +2,7 @@
 title: Home
 pagination: 
   enabled: true
+  per_page: 2
 ---
 
 <main
@@ -24,7 +25,18 @@ pagination:
     </section>
     <!--Other articles section end-->
 
-    {% for post in paginator.posts %}
-  <h1>{{ post.title }}</h1>
-{% endfor %}
+    <h2>Posts goes here</h2>
+    <section
+        class="row mt-4">
+
+        {% for post in paginator.posts %}
+            {%- if forloop.first == true -%}
+                {%- continue -%}
+            {%- endif -%}
+            {%- include post.html -%}
+        {% endfor %}
+    </section>
+    <div class="row mt-4 justify-content-center">
+        {%- include pagination.html -%}
+    </div>
 </main>
