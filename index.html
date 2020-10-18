@@ -2,7 +2,6 @@
 title: Home
 pagination: 
   enabled: true
-  per_page: 2
 ---
 
 <main
@@ -12,31 +11,22 @@ pagination:
         class="row no-gutters">
         {%- include latest_post.html -%}
     </section>
-    <!--Other articles section start-->
-    <section
-        class="row mt-4">
-        {%- for post in site.posts -%}
-            <!--Skip the latest post-->
-            {%- if forloop.first == true -%}
-                {%- continue -%}
-            {%- endif -%}
-            {%- include post.html -%}
-        {%- endfor -%}
-    </section>
-    <!--Other articles section end-->
 
-    <h2>Posts goes here</h2>
+    <!--Articles section start-->
     <section
         class="row mt-4">
 
         {% for post in paginator.posts %}
-            {%- if forloop.first == true -%}
-                {%- continue -%}
-            {%- endif -%}
             {%- include post.html -%}
         {% endfor %}
     </section>
+    <!--Articles section end-->
+
+    <!--Pagination start-->
+    {%- if paginator.total_pages > 1 -%}
     <div class="row mt-4 justify-content-center">
         {%- include pagination.html -%}
     </div>
+    {%- endif -%}
+    <!--Pagination end-->
 </main>
