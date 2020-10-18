@@ -9,13 +9,25 @@
                 src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
         </a>
         <div
-            class="card-body pb-0 clamp-excerpt">
+            class="card-body py-0 clamp-excerpt">
+            <time
+                class="small d-block w-100 text-right pt-1 pb-2 text-muted">
+                <i class="far fa-clock"></i>&nbsp;
+                {%- include post_date.html -%}
+            </time>
             <h3
                 class="card-title">
                 <a
                     href="{{ post.url | relative_url }}">{{ post.title }}</a>
             </h3>
+
             {{ post.excerpt }}
+
+            <!--Read more button-->
+            <a
+                href="{{ latest_post.url | relative_url }}" class="mt-3 border">
+                Read more
+            </a>
         </div>
         <div
             class="card-footer border-0 bg-white pt-0">

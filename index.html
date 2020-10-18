@@ -1,5 +1,7 @@
 ---
 title: Home
+pagination: 
+  enabled: true
 ---
 
 <main
@@ -21,4 +23,8 @@ title: Home
         {%- endfor -%}
     </section>
     <!--Other articles section end-->
+
+    {% for post in paginator.posts %}
+  <h1>{{ post.title }}</h1>
+{% endfor %}
 </main>
