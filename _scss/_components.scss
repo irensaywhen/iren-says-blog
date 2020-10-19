@@ -13,6 +13,12 @@
       padding-bottom: 0 !important;
     }
   }
+
+  .email-address {
+    opacity: 0;
+    left: -150%;
+    top: 2rem;
+  }
 }
 
 // Menu button styles
