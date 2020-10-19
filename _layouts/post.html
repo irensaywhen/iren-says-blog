@@ -1,7 +1,66 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }}</p>
+{% assign post = page%}
+<main
+    class="container post">
+    <article
+        class="row">
+        <div
+            class="col-12">
+            <h1
+                class="mb-0 h2">
+                {{post.title}}
+            </h1>
+            <!--Post date-->
+            <div
+                class="d-flex align-items-center">
+                <time
+                    class="small d-inline-block text-left text-muted pr-4">
+                    <i
+                        class="far fa-clock"></i>&nbsp;
+                    {%- include post_date.html -%}
+                </time>
+                <span>
+                    share on: twitter
+                </span>
+                {% include share.html %}
+            </div>
+            {% if post.subtitle %}
+                <p
+                    class="mb-3 font-weight-light">
+                    {{ post.subtitle }}
+                </p>
+            {% endif %}
+            <!--Post thumbnail-->
+            {% capture thumbnail_url %}
+                {{post.thumbnail | prepend: 'assets/img/' | relative_url }}
+            {% endcapture %}
+            <figure
+                class="text-left mb-3">
+                <img
+                    src={{ thumbnail_url }} class="mw-100 h-auto"
+                    alt="{{ post.thumbnail_alt }}">
+                <figcaption
+                    class="mt-1 font-weight-light">
+                    {{ post.thumbnail_description }}
+                </figcaption>
+            </figure>
+            {{content}}
+        </div>
+        
+        <div class="col-12">
+            {% include post_tags.html %}
+        </div>
+    </article>
 
-{{ content }}
+    <!--Related posts section-->
+    <section class="row">
+        <div class="col-12">
+            <h2 class="h4 mb-0 mt-3">
+                You may also like:
+            </h2>
+        </div>
+        {% include related_posts.html %}
+    </section>
+</main>

@@ -8,6 +8,8 @@ github:
 
 baseurl: '/'
 
+related_posts_amount: 4
+
 defaults:
   - scope:
       path: ''
