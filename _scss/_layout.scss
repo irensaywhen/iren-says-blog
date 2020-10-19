@@ -7,7 +7,7 @@ body {
 main {
   padding-top: map-get($spacers, 4);
 
-  &.post {
+  .post {
     line-height: 1.7;
     max-width: map-get($container-max-widths, md);
     margin: 0 auto;
