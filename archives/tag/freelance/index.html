@@ -16,34 +16,65 @@
   </head>
   <body>
     <header><nav
-    class="position-relative py-3 text-left text-sm-center pl-3 pl-sm-0">
-    <!--Site sections start-->
-    <ul
-        class="d-none pl-0 list-unstyled sections position-absolute text-left d-sm-flex flex-column justify-content-around py-1 h-100 mb-0 mr-0">
-    <li
-        class="category mr-0"><a
-            href="/iren-says-blog/about" class="btn btn-primary btn-small w-100 font-bio-rhyme ">
-            About me
-        </a>
-    </li>
-
-    <li
-        class="category mr-0"><a
-            href="/iren-says-blog/contact" class="btn btn-primary btn-small w-100 font-bio-rhyme ">
-            Contact
-        </a>
-    </li>
-</ul>
-    <!--Site sections end-->
+    class="d-flex justify-content-between align-items-center px-2 py-2 py-sm-1 text-left">
                     
-    <!--Site logo--><a
+    <!--Site logo-->
+    <div><a
     href="/iren-says-blog" class="logo-link">
     <img
         src=/iren-says-blog/assets/img/lips.svg class="logo"
         alt="Blog logo">
-</a><!--Menu button-->
+</a>
+<p class="font-bio-rhyme small mb-0 font-weight-bolder text-right">
+            freelance, webdev, music insights 
+        </p>
+    </div>
+
+    <!--Site sections start-->
+    <ul
+        class="d-none pl-0 list-unstyled text-left d-md-flex flex-md-row align-items-md-center justify-content-around h-100 mb-0 mr-0"><li
+        class="category mr-0 mr-md-2">
+        <a
+            href="/iren-says-blog/about" class="btn btn-light py-1 py-sm-0 py-md-1 w-100 font-bio-rhyme ">
+            About
+        </a>
+    </li>
+
+    <li class="h-100"><ul
+    class="list-unstyled pt-sm-1 pt-md-0 social h-100">
+    <li
+        class="category mr-0 h-100">
+        <a
+            class="btn btn-light py-1 h-100"
+            href="https://twitter.com/IrenSayWhen">
+            <i
+                class="fab fa-twitter"></i>
+        </a>
+    </li>
+    <li
+        class="category mr-0 h-100">
+        <a
+            class="btn btn-light py-1 h-100"
+            href="https://github.com/irensaywhen">
+            <i
+                class="fab fa-github"></i>
+        </a>
+    </li>
+    <li
+        class="category mr-0 h-100">
+        <a
+            class="btn btn-light py-1 h-100"
+            href="#">
+            <i
+                class="far fa-envelope"></i>
+        </a>
+    </li>
+</ul></li></ul>
+    <!--Site sections end-->
+
+    <!--Menu button-->
     <div
-        class="menu-btn d-sm-none" 
+        class="menu-btn d-md-none" 
         id="menu-btn">
         <div
             class="btn-line"></div>
@@ -75,21 +106,44 @@
     
     <!--Sections list-->
     <ul
-        class="pl-0 list-unstyled sections d-flex align-items-center py-2 pl-2">
-    <li
-        class="category mr-0"><a
-            href="/iren-says-blog/about" class="btn btn-primary btn-small w-100 font-bio-rhyme ">
-            About me
+        class="pl-0 list-unstyled sections d-flex align-items-center py-2 pl-2"><li
+        class="category mr-0 mr-md-2">
+        <a
+            href="/iren-says-blog/about" class="btn btn-light py-1 py-sm-0 py-md-1 w-100 font-bio-rhyme ">
+            About
         </a>
     </li>
 
+    <li class="h-100"><ul
+    class="list-unstyled pt-sm-1 pt-md-0 social h-100">
     <li
-        class="category mr-0"><a
-            href="/iren-says-blog/contact" class="btn btn-primary btn-small w-100 font-bio-rhyme ">
-            Contact
+        class="category mr-0 h-100">
+        <a
+            class="btn btn-light py-1 h-100"
+            href="https://twitter.com/IrenSayWhen">
+            <i
+                class="fab fa-twitter"></i>
         </a>
     </li>
-</ul>
+    <li
+        class="category mr-0 h-100">
+        <a
+            class="btn btn-light py-1 h-100"
+            href="https://github.com/irensaywhen">
+            <i
+                class="fab fa-github"></i>
+        </a>
+    </li>
+    <li
+        class="category mr-0 h-100">
+        <a
+            class="btn btn-light py-1 h-100"
+            href="#">
+            <i
+                class="far fa-envelope"></i>
+        </a>
+    </li>
+</ul></li></ul>
 
     <div class="mt-3">
         <h2 class="py-1 d-inline-block px-2 bg-light">
@@ -283,7 +337,18 @@ when ripe.</p>
         </div>
     </div>
 </article></section>
-</main><footer class="bg-primary text-white">
-    <h2>This is footer</h2>
-</footer></body>
+
+    <h2>Posts go here</h2>
+    <section
+        class="row mt-4">
+
+        
+            No posts
+        
+    </section>
+</main><!--<footer class="bg-primary text-white">
+    <div class="container">
+
+    </div>
+</footer>--></body>
 </html>
