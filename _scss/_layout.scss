@@ -12,8 +12,8 @@ body {
   .logo {
     width: $logo-max-width;
 
-    @include screen-sm {
-      width: $logo-sm-max-width;
+    @include screen-md {
+      width: $logo-md-max-width;
     }
   }
 }

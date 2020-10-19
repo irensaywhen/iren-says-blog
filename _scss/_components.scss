@@ -99,8 +99,9 @@
   }
 }
 
-// Sections in menu
-.sections {
-  top: 0;
-  right: 0;
+.social {
+  i {
+    font-size: $font-size-lg;
+    vertical-align: baseline;
+  }
 }

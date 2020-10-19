@@ -1,5 +1,7 @@
 ---
 layout: default
+pagination: 
+  enabled: true
 ---
 
 <main
@@ -16,5 +18,17 @@ layout: default
         {%- for post in page.posts -%}
             {%- include post.html -%}
         {%- endfor -%}
+    </section>
+
+    <h2>Posts go here</h2>
+    <section
+        class="row mt-4">
+
+        {% for post in paginator.posts %}
+        Post!
+            {{post}}
+            {%else %}
+            No posts
+        {% endfor %}
     </section>
 </main>
