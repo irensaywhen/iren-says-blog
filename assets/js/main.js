@@ -39,7 +39,12 @@
 
 // Copy email address on click
 (function () {
-  const emailAddress = document.getElementById('email').dataset.email;
+  const email = document.getElementById('email');
+  const emailAddress = email.dataset.email,
+    tooltipInitialTitle = email.title,
+    $email = $(email);
+
+  let emailCopied = false;
 
   function copyToClipboard(text) {
     // Input to copy text to clipboard
@@ -52,13 +57,34 @@
 
     document.execCommand('copy');
 
+    emailCopied = true;
+
     // Delete input
     document.body.removeChild(dummy);
   }
 
-  email.addEventListener('click', event => {
+  $email.click(event => {
     event.preventDefault();
 
     copyToClipboard(emailAddress);
+
+    $email
+      .tooltip('dispose')
+      .first()
+      .attr('title', 'Copied!')
+      .tooltip()
+      .tooltip('show');
+
+    setTimeout(() => {
+      $email
+        .tooltip('dispose')
+        .first()
+        .attr('title', tooltipInitialTitle)
+        .tooltip();
+    }, 1000);
   });
 })();
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
