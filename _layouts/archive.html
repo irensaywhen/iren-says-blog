@@ -3,9 +3,10 @@ layout: default
 pagination: 
   enabled: true
 ---
-
+{{content}}
 <main
     class="container-md">
+    {% if page.autopages %} Autopages! {%endif%}
     <h1
         class="text-center h3 pt-3 pb-2">
         <span
