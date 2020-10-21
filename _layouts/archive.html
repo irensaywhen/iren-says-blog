@@ -1,35 +1,34 @@
 ---
 layout: default
-pagination: 
-  enabled: true
 ---
-{{content}}
 <main
     class="container-md">
-    {% if page.autopages %} Autopages! {%endif%}
+    <!--Page title-->
     <h1
         class="text-center h3 pt-3 pb-2">
-        <span
-            class="small">{{page.type | capitalize }}
-            :</span>
-        {{ page.title | capitalize }}</h1>
-
+        {% if page.type == "category" %}
+            Posts in category:
+            {{ page.autopages.display_name }}
+        {% elsif page.type == "tag"%}
+            Posts tagged with:
+            {{ page.autopages.display_name | prepend: '#' }}
+        {% endif %}
+    </h1>
+    <!--Articles section start-->
     <section
         class="row mt-4">
-        {%- for post in page.posts -%}
-            {%- include post.html -%}
-        {%- endfor -%}
-    </section>
-
-    <h2>Posts go here</h2>
-    <section
-        class="row mt-4">
-
         {% for post in paginator.posts %}
-        Post!
-            {{post}}
-            {%else %}
-            No posts
+            {%- include post.html -%}
         {% endfor %}
     </section>
+    <!--Articles section end-->
+                    
+    <!--Pagination start-->
+    {%- if paginator.total_pages > 1 -%}
+        <div
+            class="row mt-4 justify-content-center">
+            {%- include pagination.html -%}
+        </div>
+    {%- endif -%}
+    <!--Pagination end-->
 </main>

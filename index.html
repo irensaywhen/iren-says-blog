@@ -6,11 +6,14 @@ pagination:
 
 <main
     class="container-md">
+    {% if paginator.page == 1%}
+    
     <!--The latest article section-->
     <section
         class="row no-gutters">
         {%- include latest_post.html -%}
     </section>
+    {% endif %}
 
     <!--Articles section start-->
     <section

@@ -26,18 +26,7 @@ defaults:
       layout: 'default'
 
 plugins:
-  - jekyll-archives
   - jekyll-paginate-v2
-
-jekyll-archives:
-  enabled: ['categories', 'tags']
-  layout: archive
-  permalinks:
-    year: '/archives/year/:year/'
-    month: '/archives/month/:year-:month/'
-    day: '/archives/day/:year-:month-:day/'
-    tag: '/archives/tag/:name/'
-    category: '/archives/category/:name/'
 
 pagination:
   # Site-wide kill switch, disabled here it doesn't run at all
@@ -70,7 +59,7 @@ autopages:
 
   # Tag pages, omit to disable
   tags:
-    title: 'Posts tagged with :tag' # :tag is replaced by the tag name
+    title: 'Posts tagged with #:tag' # :tag is replaced by the tag name
     permalink: '/tag/:tag'
     slugify:
       mode: 'default' # :tag is slugified.
