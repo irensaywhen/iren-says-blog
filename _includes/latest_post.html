@@ -4,8 +4,11 @@
     <!--Post thumbnail-->
     <a
         href="{{ latest_post.url | relative_url }}">
+        {% capture thumbnail_url %}
+            {{ latest_post.thumbnail | prepend: 'assets/img/' | relative_url }}
+        {% endcapture %}
         <img
-            src="{{ latest_post.thumbnail | relative_url }}" alt="{{ latest_post.thumbnail_alt }}" class="w-100 mw-100">
+            src="{{ thumbnail_url }}" alt="{{ latest_post.thumbnail_alt }}" class="w-100 mw-100">
     </a>
     <div
         class="px-3">

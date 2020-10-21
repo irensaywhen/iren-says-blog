@@ -2,7 +2,7 @@
 title: javascript title
 slug: post-about-javascript
 permalink: '/:slugified_categories/:title'
-thumbnail: '/assets/img/IMG_20170708_210957.jpg'
+thumbnail: 'IMG_20170708_210957.jpg'
 thumbnail_alt: 'Baikal photo 2'
 categories:
   - web development

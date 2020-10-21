@@ -11,20 +11,18 @@ layout: default
                 class="col-12">
                 <h1
                     class="mb-0 h2">
-                    {{post.title}}
+                    {{ post.title }}
                 </h1>
                 <!--Post date-->
                 <div
-                    class="d-flex align-items-center">
+                    class="d-flex align-items-center justify-content-between">
                     <time
                         class="small d-inline-block text-left text-muted pr-4">
                         <i
                             class="far fa-clock"></i>&nbsp;
                         {%- include post_date.html -%}
                     </time>
-                    <span>
-                        share on: twitter
-                    </span>
+                    {% if post_page%}Post page!{% endif %}
                     {% include share.html %}
                 </div>
                 {% if post.subtitle %}
@@ -35,7 +33,7 @@ layout: default
                 {% endif %}
                 <!--Post thumbnail-->
                 {% capture thumbnail_url %}
-                    {{post.thumbnail | prepend: 'assets/img/' | relative_url }}
+                    {{ post.thumbnail | prepend: 'assets/img/' | relative_url }}
                 {% endcapture %}
                 <figure
                     class="text-left mb-3">

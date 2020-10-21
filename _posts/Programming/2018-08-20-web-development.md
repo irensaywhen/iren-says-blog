@@ -2,7 +2,7 @@
 title: Web development
 slug: post-about-web-development
 permalink: '/:slugified_categories/:title'
-thumbnail: '/assets/img/IMG_20170707_200428.jpg'
+thumbnail: 'IMG_20170707_200428.jpg'
 thumbnail_alt: 'Baikal photo 1'
 categories:
   - web development

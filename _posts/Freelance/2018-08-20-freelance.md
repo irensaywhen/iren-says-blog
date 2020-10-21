@@ -2,7 +2,7 @@
 title: Post about freelance
 slug: post-about-freelance
 permalink: '/:slugified_categories/:title'
-thumbnail: '/assets/img/IMG_20170707_200428.jpg'
+thumbnail: 'IMG_20170707_200428.jpg'
 thumbnail_alt: 'Baikal photo 1'
 categories:
   - freelance

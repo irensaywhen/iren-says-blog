@@ -2,7 +2,7 @@
 title: HTML and CSS
 slug: post-about-html-and-css
 permalink: '/:slugified_categories/:title'
-thumbnail: '/assets/img/IMG_20170707_200428.jpg'
+thumbnail: 'IMG_20170707_200428.jpg'
 thumbnail_alt: 'Baikal photo 1'
 categories:
   - web development

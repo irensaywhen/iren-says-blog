@@ -2,7 +2,7 @@
 title: Another post about programming
 slug: post-about-programming-3
 permalink: '/:slugified_categories/:title'
-thumbnail: '/assets/img/28571670.png'
+thumbnail: '28571670.png'
 thumbnail_alt: 'Duck typing'
 categories:
   - web development

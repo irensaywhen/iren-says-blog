@@ -4,9 +4,12 @@
         class="card h-100">
         <a
             href="{{ post.url | relative_url }}">
+            {% capture thumbnail_url %}
+                {{ post.thumbnail | prepend: 'assets/img/' | relative_url }}
+            {% endcapture %}
             <img
                 class="card-img-top"
-                src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}">
+                src="{{ thumbnail_url }}" alt="{{ post.thumbnail_alt }}">
         </a>
         <div
             class="card-body py-0 pr-2 clamp-excerpt">
